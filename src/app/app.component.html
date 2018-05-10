@@ -1,0 +1,10 @@
+<h1>
+  {{title}}
+</h1>
+<button (click)="showNotes()">Get Notes</button>
+<ul>
+  <li *ngFor="let note of notes">
+    <span >{{note.title}}</span>
+    <span>{{note.verse}}</span>
+  </li>
+</ul>
