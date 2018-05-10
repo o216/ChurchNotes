@@ -8,11 +8,13 @@ firestore.settings(settings);
   * Query Definitions
   */
 const queries = {};
-queries.readNotesData = () => {
+queries.readNotesData = (callback) => {
+    const data = [];
     firestore.collection("Notes").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-          console.log(`${doc.id} => ${doc.data()}`);
+          data.push(doc.data());
       });
+      callback(data);
     });
 };
 
