@@ -1,0 +1,24 @@
+.reflect-note{
+  display: inline-block;
+  margin-left: 2%;
+  /*width: 100px;
+  height: 100px;*/
+}
+
+#reflect-container{
+ max-height:100px;
+ white-space:nowrap;
+ overflow-y: hidden;
+}
+
+#reflect-scrollbox{
+  width: 500px;
+  height: 100px;
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
+}
+
+#reflect-scrollbox::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}

@@ -12,11 +12,13 @@ export class AppComponent {
   title = 'app works!';
   notes: Note[];
 
-  constructor(private notesService: NotesService){};
+  constructor(private notesService: NotesService){
+    this.showNotes();
+  };
 
   showNotes(): void{
     this.notesService
         .getNotes()
-        .then(notes => {this.notes = notes; console.log(notes)});
+        .then(notes => {this.notes = notes;});
   }
 }
