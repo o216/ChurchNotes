@@ -1,19 +1,23 @@
 .reflect-note{
   display: inline-block;
   margin-left: 2%;
-  /*width: 100px;
-  height: 100px;*/
+  width: 60%;
+  height: 480px;
+}
+
+.reflect-main-content{
+  height: 90%;
 }
 
 #reflect-container{
- max-height:100px;
+ width:100%;
  white-space:nowrap;
  overflow-y: hidden;
 }
 
 #reflect-scrollbox{
-  width: 500px;
-  height: 100px;
+  width: 100%;
+  height: 500px;
   overflow: scroll;
   overflow: -moz-scrollbars-none;
 }
@@ -21,4 +25,5 @@
 #reflect-scrollbox::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+    display: none;
 }
