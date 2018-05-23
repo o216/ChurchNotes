@@ -1,14 +1,9 @@
-<h1>
-  {{title}}
-</h1>
-<button (click)="addNotes()">Add Notes</button>
-<span *ngIf="notes == undefined">Loading...</span>
-<ul>
-  <li *ngFor="let note of notes">
-    <span >{{note.title}}</span>
-    <span>{{note.verse}}</span>
-  </li>
-</ul>
+<div id="reflect-banner-header">
+  <h1 class="ui center aligned header">
+  Reflect
+  </h1>
+</div>
+<div *ngIf="notes == undefined">Loading...</div>
 
 <div id="reflect-scrollbox">
   <div id="reflect-container">
@@ -29,4 +24,15 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="ui two item menu" id="reflect-footer">
+  <button class="item fluid ui button">
+      <i class="user outline icon"></i>
+  </button>
+
+  <button class="item fluid ui button" (click)="addNotes()">
+      <i class="plus icon"></i>
+  </button>
 </div>

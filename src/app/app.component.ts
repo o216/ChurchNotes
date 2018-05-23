@@ -9,7 +9,6 @@ import { Note } from './note';
   providers: [NotesService],
 })
 export class AppComponent {
-  title = 'app works!';
   notes: Note[];
 
   constructor(private notesService: NotesService){

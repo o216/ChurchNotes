@@ -1,7 +1,10 @@
+#reflect-banner-header{
+  padding: 5%;
+}
 .reflect-note{
   display: inline-block;
   margin-left: 2%;
-  width: 60%;
+  width: 40%;
   height: 480px;
 }
 
@@ -26,4 +29,10 @@
     width: 0px;
     background: transparent;
     display: none;
+}
+
+#reflect-footer {
+    position: absolute;
+    bottom: 0px;
+    width:100%;
 }
