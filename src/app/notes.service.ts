@@ -16,7 +16,6 @@ export class NotesService {
                .then(response => {
                    const notes = [];
                    response.json().forEach(note => {
-                     note.date = note.date.seconds;
                      notes.push(note);
                    });
                    return notes;

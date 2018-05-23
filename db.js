@@ -12,7 +12,11 @@ queries.readNotesData = (callback) => {
     const data = [];
     firestore.collection("Notes").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-          data.push(doc.data());
+         let note = {};
+         note = doc.data();
+         note.id = doc.id;
+         note.date = note.date.seconds;
+         data.push(note);
       });
       callback(data);
     });
