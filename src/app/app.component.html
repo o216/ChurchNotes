@@ -1,31 +1,10 @@
-<div id="reflect-banner-header">
+<div class="ui teal inverted segment" id="reflect-banner-header">
   <h1 class="ui center aligned header">
   Reflect
   </h1>
 </div>
-<div *ngIf="notes == undefined">Loading...</div>
 
-<div id="reflect-scrollbox">
-  <div id="reflect-container">
-    <div *ngFor="let note of notes" class="ui card reflect-note">
-      <div class="content reflect-main-content">
-        <div class="right floated meta">{{note.date * 1000 | date: 'MM/dd/yyyy'}}</div>
-        <div class="header">{{note.title}}</div>
-        <div class="description">
-          <div>{{note.text}}</div>
-        </div>
-      </div>
-      <div class="content">
-        <span class="right floated">
-          <i class="pencil alternate icon"></i>
-          Edit
-        </span>
-        {{note.verse}}
-      </div>
-    </div>
-  </div>
-</div>
-
+<notes-list></notes-list>
 
 <div class="ui two item menu" id="reflect-footer">
   <button class="item fluid ui button">
@@ -36,3 +15,5 @@
       <i class="plus icon"></i>
   </button>
 </div>
+
+<router-outlet></router-outlet>
