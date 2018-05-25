@@ -1,0 +1,9 @@
+<div *ngIf="notes == undefined">Loading...</div>
+
+<div id="reflect-scrollbox">
+  <div id="reflect-container">
+    <div *ngFor="let note of notes" class="reflect-note-container">
+        <note [noteData]="note"></note>
+   </div>
+  </div>
+</div>

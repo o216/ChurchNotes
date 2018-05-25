@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NotesService } from '../notes.service';
-import { Note } from '../note';
+import { NotesService } from './notes.service';
+import { Note } from './note/note';
 
 @Component({
   selector: 'notes-list',
-  templateUrl: './notes-list.component.html',
-  styleUrls: ['./notes-list.component.css'],
+  templateUrl: './notes.component.html',
+  styleUrls: ['./notes.component.css'],
   providers: [NotesService],
 })
 export class NotesListComponent {

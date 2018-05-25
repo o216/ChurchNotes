@@ -1,18 +1,8 @@
-.reflect-note{
-  display: inline-block;
-  margin-left: 2%;
-  width: 40%;
-  height: 650px;
-}
-
-.reflect-main-content{
-  height: 90%;
-}
-
 #reflect-container{
  width:100%;
  white-space:nowrap;
  overflow-y: hidden;
+ padding: 1%;
 }
 
 #reflect-scrollbox{
@@ -26,4 +16,14 @@
     width: 0px;
     background: transparent;
     display: none;
+}
+
+.reflect-note-container{
+  display: inline-block;
+  width: 80%;
+  margin-left: 2%;
+}
+
+.reflect-note-container:last-child{
+  margin-right: 2%;
 }
