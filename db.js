@@ -16,6 +16,7 @@ queries.readNotesData = (callback) => {
          note = doc.data();
          note.id = doc.id;
          note.date = note.date.seconds;
+         note.date *= 1000;
          data.push(note);
       });
       callback(data);
