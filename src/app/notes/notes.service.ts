@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { Note } from './note';
+import { Note } from './note/note';
 
 @Injectable()
 export class NotesService {
@@ -11,7 +11,7 @@ export class NotesService {
   constructor(private http: Http) { }
 
   getNotes(): Promise<Note[]> {
-    return this.http.get(this.notesURL)
+    return this.http.get(this.notesURL + 'all')
                .toPromise()
                .then(response => {
                    const notes = [];
@@ -19,6 +19,15 @@ export class NotesService {
                      notes.push(note);
                    });
                    return notes;
+               })
+               .catch(this.handleError);
+  }
+
+  addNote(data): Promise<boolean> {
+    return this.http.post(this.notesURL + 'add', data, this.headers)
+               .toPromise()
+               .then(response => {
+                   return response;
                })
                .catch(this.handleError);
   }
