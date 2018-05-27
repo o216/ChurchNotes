@@ -23,4 +23,13 @@ queries.readNotesData = (callback) => {
     });
 };
 
+queries.addNote = (newNote, callback) => {
+    const data = [];
+    firestore.collection("Notes").add(newNote).then((docRef) => {
+      callback(data);
+    });
+};
+
+
+
 module.exports = queries;
