@@ -3,14 +3,14 @@ const path = require('path');
 const app = express();
 const db = require('./db.js');
 const bodyParser = require('body-parser')
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', (req, res) => {res.sendFile('src/index.html')});
+app.get('/', (req, res) => {res.sendFile('dist/index.html')});
 
 app.get('/api/all', (req, res) => {
     db.readNotesData(function(data){
