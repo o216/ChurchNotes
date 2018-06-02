@@ -6,3 +6,16 @@
 .reflect-main-content{
   height: 90%;
 }
+#input-text-textbox{
+  width:100%;
+  height:450px;
+}
+
+@media only screen and (max-width: 600px) {
+  .reflect-note-card{
+    height: 550px;
+  }
+  #input-text-textbox{
+    height:350px;
+  }
+}
