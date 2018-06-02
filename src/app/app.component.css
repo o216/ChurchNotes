@@ -1,6 +1,7 @@
 #reflect-banner-header{
   padding: 1%;
   border-radius: 0%;
+  cursor: pointer;
 }
 
 #reflect-footer {

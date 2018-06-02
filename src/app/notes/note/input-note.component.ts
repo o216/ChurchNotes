@@ -14,6 +14,10 @@ import { NotesService } from '../notes.service';
 export class InputNoteComponent extends NoteComponent {
   constructor(private route:ActivatedRoute, private notesService: NotesService){
     super();
+    if(this.note != null && this.note.date == null){
+      const now = new Date();
+      this.note.date = now.getTime();
+    }
   }
 
   addNote(): void{

@@ -12,7 +12,7 @@
     <div class="ui buttons right floated">
       <button class="ui button">Cancel</button>
       <div class="or"></div>
-      <button class="ui teal button" (click)="addNote()">Save</button>
+      <button class="ui teal button" (click)="addNote()" [routerLink]="['/']">Save</button>
     </div>
     <div class="ui input">
         <input type="text"  [(ngModel)]="note.verse">
