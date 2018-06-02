@@ -15,8 +15,10 @@ queries.readNotesData = (callback) => {
          let note = {};
          note = doc.data();
          note.id = doc.id;
-         note.date = note.date.seconds;
-         note.date *= 1000;
+         if(note.date != null){
+           note.date = note.date.seconds;
+           note.date *= 1000;
+         }
          data.push(note);
       });
       callback(data);
@@ -25,7 +27,7 @@ queries.readNotesData = (callback) => {
 
 queries.addNote = (newNote, callback) => {
     const data = [];
-    firestore.collection("Notes").add(newNote).then((docRef) => {
+    firestore.collection("Notes").add({...newNote, date: firebase.firestore.FieldValue.serverTimestamp()}).then((docRef) => {
       callback(data);
     });
 };
