@@ -10,7 +10,7 @@ firestore.settings(settings);
 const queries = {};
 queries.readNotesData = (callback) => {
     const data = [];
-    firestore.collection("Notes").get().then((querySnapshot) => {
+    firestore.collection("Notes").orderBy("date", "desc").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
          let note = {};
          note = doc.data();
