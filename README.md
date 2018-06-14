@@ -1,11 +1,17 @@
 # Reflect
 
+See the app live at: https://reflect-and-thrive.herokuapp.com/
+
+#Background
+
+The web app is intended for a user to take notes on lessons they have learned - in whatever context - so that they later reflect on them. I envisioned the app to be used for mobile phone use since a user is likely to take these notes while out and about. The app is still very much a work in progress.
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server
-Run `node server` to get api server running. 
+Run `node server` to get api server running.
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run dev` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
 ## Code scaffolding
