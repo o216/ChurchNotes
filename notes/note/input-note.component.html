@@ -1,0 +1,21 @@
+<div class="ui card reflect-note-card">
+  <div class="content reflect-main-content">
+    <div class="right floated meta">{{note.date | date: 'MM/dd/yyyy'}}</div>
+    <div class="header ui input">
+      <input type="text"  [(ngModel)]="note.title">
+    </div>
+    <div class="description ui fluid input">
+      <textarea type="textarea" [(ngModel)]="note.text" id="input-text-textbox"></textarea>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui buttons right floated">
+      <button class="ui button" [routerLink]="['/']">Cancel</button>
+      <div class="or"></div>
+      <button class="ui teal button" (click)="addNote()" [routerLink]="['/']">Save</button>
+    </div>
+    <div class="ui input">
+        <input type="text"  [(ngModel)]="note.verse">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+#reflect-container{
+ width:100%;
+ white-space:nowrap;
+ overflow-y: hidden;
+ padding: 1%;
+}
+
+#reflect-scrollbox{
+  width: 100%;
+  height: 665px;
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
+}
+
+#reflect-scrollbox::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  display: none;
+}
+
+.reflect-note-container{
+  display: inline-block;
+  width: 80%;
+  margin-left: 2%;
+}
+
+.reflect-note-container:last-child{
+  margin-right: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  #reflect-scrollbox{
+    height: 555px;
+  }
+}
